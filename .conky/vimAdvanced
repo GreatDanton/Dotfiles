@@ -1,0 +1,87 @@
+conky.config = {
+	default_color = '#afafaf',
+	color2 = '#d64937',
+	color3 = '#afafaf',
+
+	background = true,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+  own_window_transparent = true,
+	double_buffer = true,
+	update_interval = 6,
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+
+	use_xft = true,
+	xftalpha = 1,
+	maximum_width = 330,
+	font = 'RobotoMono Medium:size=9',
+	stippled_borders = 0,
+	border_width = 1,
+	draw_graph_borders = false,
+
+	alignment = 'top_right',
+	gap_x = 260,
+	gap_y = 84,
+};
+
+conky.text = [[
+${alignc}${color3}ViM Advanced
+
+${color2}open and split view H	${alignr}${color}:sp
+${color2}open and split view V	${alignr}${color}:vsp
+
+${alignc}${color3}Multiple Files
+${color2}open in a new buffer	${alignr}${color}:e
+${color2}goto next buffer	    ${alignr}${color}:bn
+${color2}goto prev buffer	    ${alignr}${color}:bp
+${color2}del/close buffer	    ${alignr}${color}:bd
+${color2}split horizontal		${alignr}${color}Ctrl+w,s
+${color2}split vertical		    ${alignr}${color}Ctrl+w,v
+${color2}switch windows		    ${alignr}${color}Ctrl+w,w
+${color2}close window		    ${alignr}${color}Ctrl+w,q
+
+${alignc}${color3}Visual Commands
+${color3}Use with visual mode, eg :viw
+${color3}can chain with other commands
+${color2}inner word         ${alignr}${color}iw
+${color2}    a word         ${alignr}${color}aw
+${color2}inner WORD         ${alignr}${color}iW
+${color2}    a WORD         ${alignr}${color}aW
+${color2}inner sentence     ${alignr}${color}is
+${color2}    a sentence     ${alignr}${color}as
+${color2}inner paragraph    ${alignr}${color}ip
+${color2}    a paragraph    ${alignr}${color}ap
+
+${alignc}${color3}Visual Block Selection
+${color2}select  a/i        ${alignr}${color}" ` ( { <
+${color2}${alignr} or       ${alignr}${color}) } >
+
+${alignc}${color3}Completion
+${color2}search backwards for typed     ${alignr}${color}Ctrl+p
+${color2}search forwards for typed ${alignr}${color}Ctrl+n
+${color2}complete line     ${alignr}${color}Ctrl+x / Ctrl+l
+
+${alignc}${color3}Resizing Windows
+${color2}window width + ${alignr}${color}Ctrl+W, >
+${color2}window width - ${alignr}${color}Ctrl+W, <
+${color2}set height ${alignr}${color}xx Ctrl+W, _
+${color2}set width ${alignr}${color} xx Ctrl+W, |
+${color2}equal width and height ${alignr}${color} Ctrl+W, =
+
+
+
+
+
+${alignc}${color3} Bash
+${color2}list files ${alignr}${color}ls -al
+${color2}read file ${alignr}${color}cat file
+${color2}new file ${alignr}${color}touch file
+${color2}delete ${alignr}${color} rm file
+${color2}delete recursive ${alignr}${color} rm -r dir
+${color2}delete 2 ${alignr}${color} find "name" -delete
+${color2}move/rename files ${alignr}${color} mv src dest
+${color2}copy ${alignr}${color} cp src dest
+]];

@@ -1,0 +1,107 @@
+conky.config = {
+	color1 = '#afafaf',
+	color2 = '#d64937',
+	color3 = '#afafaf',
+	minimum_width = 330, minimum_height = 360,
+
+	background = true,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_transparent = true,
+	double_buffer = true,
+	update_interval = 3,
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+
+	cpu_avg_samples = 1,
+	net_avg_samples = 1,
+
+	text_buffer_size = 4096,
+	out_to_console = false,
+
+	maximum_width = 580,
+
+	alignment = 'top_right',
+	gap_y = 55,
+	gap_x = 10,
+	border_inner_margin = 20,
+
+	use_xft = true,
+	xftalpha = 1,
+	font = 'LessPerfectDOSVGA:size=12',
+
+	default_color = '#FFFFFF',
+	default_shade_color = '#333333',
+	default_outline_color = 'black',
+
+};
+
+conky.text = [[
+
+#${color1}${offset 35}${execi 1800 fortune fortunes | fold -s -w 55}
+
+${color3}System ${color2}${cpu}% ${alignr}${color2} ${alignr}$kernel
+
+${offset 32}${color1}Frq 1 : ${color2}${freq_g 1} GHz
+${alignr}${voffset -27}${cpugraph cpu1 28,150 000000 d64937}
+${offset 32}${color1}Frq 2 : ${color2}${freq_g 2} GHz
+${alignr}${voffset -27}${cpugraph cpu2 28,150 000000 d64937}
+${offset 32}${color1}Frq 3 : ${color2}${freq_g 3} GHz
+${alignr}${voffset -27}${cpugraph cpu3 28,150 000000 d64937}
+${offset 32}${color1}Frq 4 : ${color2}${freq_g 4} GHz
+${alignr}${voffset -27}${cpugraph cpu4 28,150 000000 d64937}
+#${offset 32}${color1}Frq 5 : ${color2}${freq_g 4} GHz
+#${alignr}${voffset -27}${cpugraph cpu5 28,150 000000 d64937}
+#${offset 32}${color1}Frq 6 : ${color2}${freq_g 4} GHz
+#${alignr}${voffset -27}${cpugraph cpu6 28,150 000000 d64937}
+${offset 32}${color3}CPU Temp : ${color2}${hwmon 1 temp 1}°C
+${offset 32}${color3}MB  Temp : ${color2}${hwmon 0 temp 1}°C
+
+${color3} Processes ${processes}
+${offset 32}${color1}Run  : ${running_processes}
+${offset 32}${color1}CPU  : ${color2}${top name 1}${goto 230}${color1}  ${top pid 1}${alignr}${top cpu 1}%
+${offset 32}${color1}CPU  : ${color2}${top name 2}${goto 230}${color1}  ${top pid 2}${alignr}${top cpu 2}%
+${offset 32}${color1}CPU  : ${color2}${top name 3}${goto 230}${color1}  ${top pid 3}${alignr}${top cpu 3}%
+${offset 32}${color1}CPU  : ${color2}${top name 4}${goto 230}${color1}  ${top pid 4}${alignr}${top cpu 3}%
+${offset 32}${color1}CPU  : ${color2}${top name 5}${goto 230}${color1}  ${top pid 5}${alignr}${top cpu 3}%
+${offset 32}${color1}RAM  : ${color2}${top_mem name 1}${goto 230}${color1}  ${top_mem pid 1}${alignr}${top_mem mem 1}%
+${offset 32}${color1}RAM  : ${color2}${top_mem name 2}${goto 230}${color1}  ${top_mem pid 2}${alignr}${top_mem mem 2}%
+${offset 32}${color1}RAM  : ${color2}${top_mem name 3}${goto 230}${color1}  ${top_mem pid 3}${alignr}${top_mem mem 3}%
+${offset 32}${color1}RAM  : ${color2}${top_mem name 4}${goto 230}${color1}  ${top_mem pid 4}${alignr}${top_mem mem 3}%
+${offset 32}${color1}RAM  : ${color2}${top_mem name 5}${goto 230}${color1}  ${top_mem pid 5}${alignr}${top_mem mem 3}%
+
+${color3} Transfers
+${offset 32}${color1}Up    : ${color2}${upspeed wlp5s0}${alignr}${color1}
+${offset 32}${color1}Total : ${color2}${totalup wlp5s0}
+${alignr}${voffset -37}${upspeedgraph wlp5s0 30,150 000000 d64937}
+${offset 32}${color1}Down  : ${color2}${downspeed wlp5s0}${alignr}${color1}
+${offset 32}${color1}Total : ${color2}${totaldown wlp5s0}
+${alignr}${voffset -37}${downspeedgraph wlp5s0 30,150 000000 d64937}
+
+${color3} Network${if_existing /proc/net/route wlp5s0}
+${offset 32}${color1}Force : ${color2}${wireless_link_qual_perc wlp5s0}%
+${offset 32}${color1}Type  : ${color2}${gw_iface}
+${offset 32}${color1}Name  : ${color2}${wireless_essid wlp5s0}${else}
+${offset 32}${color1}Force : unknown
+${offset 32}${color1}Type  : unknown
+${offset 32}${color1}Name  : unknown${endif}
+
+${color3} Address IP${if_existing /proc/net/route wlp5s0}
+${offset 32}${color1}Locl. : ${color2}${addr wlp5s0}
+${offset 32}${color1}Pass. : ${color2}${gw_ip}
+${offset 32}${color1}Publ. : ${color2}${execi 3600 wget www.whatismyip.com/automation/n09230945.asp -O - -q}${else}
+${offset 32}${color1}Locl. : xxx.xxx.xxx.xxx
+${offset 32}${color1}Pass. : xxx.xxx.xxx.xxx
+${offset 32}${color1}Publ. : xxx.xxx.xxx.xxx${endif}
+
+${color3} Ports
+${offset 32}${color1}Open  : ${color2}${tcp_portmon 1 65535 count}
+
+${color3} Hard Drive ${color3}
+${offset 32}${color1}/root : ${fs_type /}${goto 150}Used ${color2}${fs_used_perc /}%${alignr}${color1}Free ${fs_free /}
+${offset 32}${color2}${fs_bar 9 /}
+${offset 32}${color1}/home : ${fs_type /home}${goto 150}Used ${color2}${fs_used_perc /home}%${alignr}${color1}Free ${fs_free /home}
+${offset 32}${color2}${fs_bar 9 /home}
+]];

@@ -1,0 +1,88 @@
+conky.config = {
+	default_color = '#afafaf',
+	color2 = '#d64937',
+	color3 = '#afafaf',
+
+	background = true,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_transparent = true,
+	double_buffer = true,
+	update_interval = 6,
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+
+	use_xft = true,
+	xftalpha = 1,
+	maximum_width = 330,
+	font = 'RobotoMono Medium:size=9',
+	stippled_borders = 0,
+	border_width = 1,
+	draw_graph_borders = false,
+
+	alignment = 'middle_right',
+	gap_x = 10,
+	gap_y = 0,
+};
+
+conky.text = [[
+${alignc}${color3}ViM Cheat Sheet
+
+${color2}write			${alignr}${color}:w
+${color2}quit			${alignr}${color}:q
+${color2}undo			${alignr}${color} u
+${color2}redo			${alignr}${color}Ctrl+r
+
+${alignc}${color3}Mode Controls
+${color2}visual mode (char)	        ${alignr}${color} v
+${color2}visual mode (line)	        ${alignr}${color} V
+${color2}insert before cursor 		${alignr}${color} i
+${color2}insert after cursor 		${alignr}${color} a
+${color2}insert at start of line 	${alignr}${color} I
+${color2}normal mode ${alignr}${color}Esc
+
+${alignc}${color3}Cursor Movement
+${color3}Lowercase = include punctuation
+${color3}Uppercase = operate on word only
+${color2}jump to start of word 	${alignr}${color}w ${color2}or ${color}W
+${color2}jump to end of word 	${alignr}${color}e ${color2}or ${color}E
+${color2}jump back by word  	${alignr}${color}b ${color2}or ${color}B
+${color2}to start of line 	    ${alignr}${color} 0
+${color2}to end of line 	    ${alignr}${color} $$
+${color2}goto line xx 		    ${alignr}${color}xx G
+
+${alignc}${color3}Editing Mode
+${color2}replace single (cursor) 	${alignr}${color} r
+${color2}delete single (cursor)	    ${alignr}${color} x
+${color2}join below to current 	    ${alignr}${color} J
+${color2}change char (up to num)    ${alignr}${color} c
+${color2}change line 		        ${alignr}${color}cc
+${color2}change word 		        ${alignr}${color}cw
+${color2}change char (up to num)    ${alignr}${color} s
+${color2}change line with text	    ${alignr}${color} S
+${color2}change inner word ${alignr}${color}ciw
+
+${alignc}${color3}Copy/Paste
+${color2}copy line		        ${alignr}${color}yy
+${color2}copy word		        ${alignr}${color}yw
+${color2}copy to end of line	${alignr}${color}y$$
+${color2}paste after cursor	    ${alignr}${color} p
+${color2}paste before cursor	${alignr}${color} P
+${color2}cut char		        ${alignr}${color} x
+${color2}cut line		        ${alignr}${color}dd
+${color2}cut word		        ${alignr}${color}dw
+${color2}cut to end of line	    ${alignr}${color} D
+
+${alignc}${color3}Search/Replace
+${color2}search for pattern	    ${alignr}${color}/pattern
+${color2}search in reverse	    ${alignr}${color}?a-pattern
+${color2}repeat forwards	    ${alignr}${color} n
+${color2}repeat backwards	    ${alignr}${color} N
+${color2}replace word in line	${alignr}${color}:s/old/new/g
+${color2}replace all matched	${alignr}${color}:%s/old/new/g
+
+${color}don't/ask before replace - g/gc
+${color}many commands can be chained
+]];
