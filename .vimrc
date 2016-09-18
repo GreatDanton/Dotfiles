@@ -78,6 +78,18 @@ map <F2> :NERDTreeToggle<CR>
 map <F8> :exec '!go run' shellescape(@%,1)<CR>
 execute pathogen#infect()
 
+"F7 builds go code
+map <F7> :exec '!go build' shellescape(@%,1)<CR>
+
+"tab = 4 visually in go
+au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
+
+" autoclosing brackets - see vim wikia for more
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap {{     {
+inoremap {}     {}
+
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1

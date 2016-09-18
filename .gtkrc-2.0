@@ -1,37 +1,19 @@
-style "darkback"
-{
-	bg[NORMAL] = "#404040"
-	bg[ACTIVE] = "#606060"
-	bg[PRELIGHT] = "#808080"
-	fg[NORMAL] = "#ccc"
-	fg[ACTIVE] = "#fff"
-	fg[PRELIGHT] = "#fff"
-}
-widget "whiskermenu-window*" style "darkback"
+# DO NOT EDIT! This file will be overwritten by LXAppearance.
+# Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
-style "darktree"
-{
-	base[NORMAL] = "#404040"
-	base[ACTIVE] = "#606060"
-	text[NORMAL] = "#ccc"
-	text[ACTIVE] = "#fff"
-}
-widget "whiskermenu-window*TreeView*" style "darktree"
-
-style "darksearch"
-{
-base[NORMAL] = "#404040"
-text[NORMAL] = "#ccc"
-}
-
-widget "whiskermenu-window*GtkEntry*" style "darksearch"
-
-style "xfdesktop-icon-view" {
-    XfdesktopIconView::shadow-x-offset = 0
-    XfdesktopIconView::shadow-y-offset = 0
-    XfdesktopIconView::shadow-color = "#ff0000"
-    XfdesktopIconView::selected-shadow-x-offset = 0
-    XfdesktopIconView::selected-shadow-y-offset = 0
-    XfdesktopIconView::selected-shadow-color = "#00ff00"
-}
-widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
+include "/home/jan/.gtkrc-2.0.mine"
+gtk-theme-name="DF-Arc-OSX"
+gtk-icon-theme-name="elementary-xfce-darker"
+gtk-font-name="Sans 10"
+gtk-cursor-theme-name="DMZ-Black"
+gtk-cursor-theme-size=0
+gtk-toolbar-style=GTK_TOOLBAR_BOTH
+gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
+gtk-button-images=1
+gtk-menu-images=1
+gtk-enable-event-sounds=1
+gtk-enable-input-feedback-sounds=1
+gtk-xft-antialias=1
+gtk-xft-hinting=1
+gtk-xft-hintstyle="hintfull"
+gtk-xft-rgba="rgb"
