@@ -12,7 +12,7 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 set cursorline
-set cursorcolumn
+"set cursorcolumn
 set wrap
 set nocompatible
 set t_Co=256
@@ -37,7 +37,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
 
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
+"highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
 " different background at 120 chars
 let &colorcolumn="80,".join(range(120,999),",")

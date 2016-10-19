@@ -23,7 +23,7 @@ conky.config = {
 
 	maximum_width = 300,
 
-	alignment = 'middle_middle',
+	alignment = 'top_middle',
 	gap_y = 0,
 	gap_x = 0,
 	border_inner_margin = 20,

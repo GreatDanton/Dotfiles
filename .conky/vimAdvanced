@@ -70,9 +70,10 @@ ${color2}window width - ${alignr}${color}Ctrl+W, <
 ${color2}set height ${alignr}${color}xx Ctrl+W, _
 ${color2}set width ${alignr}${color} xx Ctrl+W, |
 ${color2}equal width and height ${alignr}${color} Ctrl+W, =
-
-
-
+  
+${alignc}${color3}Delete
+${color2}delete excluding {x} ${alignr}${color}dt{x}
+${color2}delete including {x} ${alignr}${color}dc{x}
 
 
 ${alignc}${color3} Bash
