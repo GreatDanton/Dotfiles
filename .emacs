@@ -19,7 +19,7 @@
  '(custom-enabled-themes (quote (gruvbox)))
  '(custom-safe-themes
    (quote
-    ("3fd0fda6c3842e59f3a307d01f105cce74e1981c6670bb17588557b4cebfe1a7" default)))
+    ("9f3181dc1fabe5d58bbbda8c48ef7ece59b01bed606cfb868dd147e8b36af97c" "06dbcfac3705aaaa79e1a3264c6fd44ef0cf86ef5ed67930e4007e63a8c1e8ee" "398f0209bfd642cf7a5e3e03bdc20db2822fd6746225a4bd99ccf9b26d3059d0" "3fd0fda6c3842e59f3a307d01f105cce74e1981c6670bb17588557b4cebfe1a7" default)))
  '(inhibit-startup-screen t)
  '(org-agenda-files (quote ("~/test.org"))))
 (custom-set-faces

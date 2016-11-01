@@ -30,9 +30,9 @@ conky.config = {
 
 	use_xft = true,
 	xftalpha = 1,
-	font = 'Ubuntu:size=20',
+	font = 'Bungee:size=20',
 
-	default_color = '#FFFFFF',
+	default_color = '#afafaf',
 	default_shade_color = '#333333',
 	default_outline_color = 'black',
 

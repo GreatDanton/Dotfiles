@@ -45,7 +45,7 @@ func parseData(url string) *Weather {
 
 	var parsedData Weather
 	if err := json.NewDecoder(response.Body).Decode(&parsedData); err != nil {
-		fmt.Errorf("Error??, %s", err)
+		fmt.Errorf("%s", err)
 		response.Body.Close()
 	}
 	response.Body.Close()
