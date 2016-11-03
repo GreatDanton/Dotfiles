@@ -1,6 +1,7 @@
 package main
 
-// see this thread for more ideas: https://www.reddit.com/r/golang/comments/5aqc6c/reassigning_variables_code_review/
+// see this thread for more ideas:
+// https://www.reddit.com/r/golang/comments/5aqc6c/reassigning_variables_code_review/
 import (
 	"fmt"
 	"os"
@@ -10,15 +11,8 @@ import (
 // reading final date from countdown file and calculating the amount
 // of days, hours, minutes, seconds between now and chosen final date
 func main() {
-	// read ending date from file
-	// TODO: delete this later, leaving it for now
-	/*buf, err := ioutil.ReadFile("COUNTDOWN.txt")
-	if err != nil {
-		fmt.Printf("%s", err)
-	}
-	data := string(buf)
-	*/
-	// data is imported via cmd arguments
+
+	// data is imported via arguments
 	data := fmt.Sprint(os.Args[1])
 
 	// parse time in desired format (days.months.years)
