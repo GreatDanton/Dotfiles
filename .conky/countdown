@@ -1,0 +1,34 @@
+conky.config = {
+	default_color = '#afafaf',
+	color2 = '#d64937',
+	color3 = '#afafaf',
+
+	background = true,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    own_window_transparent = true,
+	double_buffer = true,
+	update_interval = 6,
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+
+	use_xft = true,
+	xftalpha = 1,
+	font = 'RobotoMono Medium:size=9',
+	stippled_borders = 0,
+	border_width = 1,
+	draw_graph_borders = false,
+
+	alignment = 'top_middle',
+	gap_x = 10,
+	gap_y = 10,
+};
+
+conky.text = [[
+# uptime
+${color2}${alignc}${font Bungee:normal:size=20}Ship Home page 
+# Piping cat command to my script which reads arguments
+${alignc}${font OfficeCodeProMedium:normal:size=18}${color}${execi 6 ~/.conky/countDown "$(cat ~/COUNTDOWN.txt)"}
+]];
