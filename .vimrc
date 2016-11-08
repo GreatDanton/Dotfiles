@@ -22,8 +22,8 @@ set relativenumber
 set colorcolumn=100
 
 " save swap files into .backup (if exists) or tmp
-set backupdir=./.backup,.,/tmp
-set directory=.,./.backup,/tmp
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swp//
 
 " display only filename
 set wmh=0

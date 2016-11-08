@@ -6,3 +6,5 @@
 !.conky
 !fonts
 !.emacs
+*.conky/old_configs
+*.conky/scripts

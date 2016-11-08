@@ -1,5 +1,5 @@
 #!/bin/sh
-sleep 10
+sleep 5
 conky -q -c ~/.conky/vimCheatSheet
 conky -q -c ~/.conky/weather
 conky -q -c ~/.conky/todo
