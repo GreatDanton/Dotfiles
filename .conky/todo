@@ -28,10 +28,9 @@ conky.config = {
 	use_xft = true,
 	xftalpha = 1,
 	font = 'Roboto Mono:size=10',
-
 };
 
 conky.text = [[
 ${color2}${font M+ 1mn:bold:size=10}TODO:
-${color1}${font M+ 1mn:normal:size=10}${execi 60 cat ~/TODO.org}
- ]];
+${color1}${font M+ 1mn:normal:size=10}${execi 60 cat ~/TODO.org} 
+]];

@@ -54,7 +54,7 @@ func timeDiff(t time.Time) (days, hours, minutes, seconds string) {
 // Prefixes a number with 0 if necessary
 func prefixNumber(number int64) string {
 	return_val := ""
-	if number < 10 {
+	if number < 10 && number > 0 {
 		return_val = fmt.Sprintf("0%v", number)
 	} else {
 		return_val = fmt.Sprintf("%v", number)

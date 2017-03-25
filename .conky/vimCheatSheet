@@ -30,10 +30,8 @@ conky.config = {
 conky.text = [[
 # uptime
 ${color2}${font Bungee:normal:size=20}Uptime ${alignr}${color}${uptime_short}
-# Vim cheat sheet
 ${font RobotoMono Medium:size=9}
 ${alignc}${color3}ViM shortcuts
-
 ${color2}open and split view H	${alignr}${color}:sp
 ${color2}open and split view V	${alignr}${color}:vsp
 
@@ -81,7 +79,6 @@ ${color2}Next tab ${alignr}${color}Ctrl+Tab
 ${color2}Previous tab ${alignr}${color}Ctrl+Shift+Tab
 ${color2}New tab ${alignr}${color}Ctrl+T
 
-
 ${alignc}${color3} Bash
 ${color2}list files ${alignr}${color}ls -al
 ${color2}read file ${alignr}${color}cat file
@@ -92,4 +89,8 @@ ${color2}delete 2 ${alignr}${color} find "name" -delete
 ${color2}move/rename files ${alignr}${color} mv src dest
 ${color2}copy ${alignr}${color} cp src dest
 
+${alignc}${color3} Cmus
+${color2}play/pause ${alignr}${color} c
+${color2}switch windows ${alignr}${color} TAB
+${color2}add music ${alignr}${color}:add ~/Path/
 ]];

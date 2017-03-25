@@ -50,6 +50,7 @@ hi Cursor guifg=white guibg=black
 
 let g:indent_guides_auto_colors = 1
 
+" use hybrid theme
 call plug#begin()
 Plug 'scwood/vim-hybrid'
 call plug#end()
@@ -58,7 +59,25 @@ set background=dark
 colorscheme hybrid
 filetype indent plugin on
 
+execute pathogen#infect()
 
+" vim syntastic plugin (checking syntax errors)
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+" END of syntastic plugin
+"
+" VUNDLE
+"call vundle#begin()
+"Plugin 'VundleVim/Vundle.vim'
+"Plugin 'Valloric/YouCompleteMe'
+"call vundle#end()
+"
 
 "hi CursorLine cterm=none ctermbg=Black
 "hi CursorColumn cterm=none ctermbg=Black
@@ -83,7 +102,6 @@ map <F2> :NERDTreeToggle<CR>
 
 "F8 runs go code"
 map <F8> :exec '!go run' shellescape(@%,1)<CR>
-execute pathogen#infect()
 
 "F7 builds go code
 map <F7> :exec '!go build' shellescape(@%,1)<CR>
@@ -103,6 +121,8 @@ let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+
 
 " Vim plugin for showing matching html tags.
 " Maintainer:  Greg Sexton <gregsexton@gmail.com>
