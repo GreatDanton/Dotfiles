@@ -28,7 +28,7 @@ conky.config = {
 
 conky.text = [[
 # uptime
-${color2}${alignc}${font Bungee:normal:size=20}Ship Home page 
+${color2}${alignc}${font Bungee:normal:size=20}Write Thesis
 # Piping cat command to my script which reads arguments
 ${alignc}${font OfficeCodeProMedium:normal:size=18}${color}${execi 6 ~/.conky/countDown "$(cat ~/COUNTDOWN.txt)"}
 ]];

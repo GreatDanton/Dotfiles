@@ -22,7 +22,7 @@ conky.config = {
 	out_to_console = false,
 
 	alignment = 'bottom_left',
-	gap_y = 10,
+	gap_y = 60,
 	gap_x = 10,
 	border_inner_margin = 20,
 

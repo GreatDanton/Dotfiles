@@ -51,7 +51,9 @@ bindsym $mod+d exec rofi -show run -font "Office Code Pro Medium 15" -fg "#bcbcb
 exec_always compton -f -D 3
 exec_always ~/.conky/startup_script.sh
 
-exec_always feh --bg-fill ~/Pictures/Wallpapers/reddit/universe.png
+# little planet - dark background
+#exec_always feh --bg-fill ~/Pictures/Wallpapers/reddit/universe.png
+exec_always feh --bg-fill ~/Pictures/Wallpapers/datacenter_dark.jpg
 
 # turn on numlock
 exec_always --no-startup-id numlockx on
@@ -66,7 +68,7 @@ exec_always --no-startup-id numlockx on
 
 # 
 # Monitor setup
-exec_always --no-startup-id xrandr --output VGA-1 --auto --left-of DVI-D-1
+exec_always --no-startup-id xrandr --output VGA-0 --auto --left-of DVI-D-0
 
 
 # change focus
