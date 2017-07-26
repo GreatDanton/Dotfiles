@@ -21,10 +21,9 @@ conky.config = {
 	stippled_borders = 0,
 	border_width = 1,
 	draw_graph_borders = false,
-
-	alignment = 'top_right',
-	gap_x = 10,
-	gap_y = 10,
+    alignment = 'top_left',
+    gap_x = 1650,
+    gap_y = 10,
 };
 
 conky.text = [[
@@ -34,7 +33,7 @@ ${font RobotoMono Medium:size=9}
 ${alignc}${color3}ViM shortcuts
 ${color2}open and split view H	${alignr}${color}:sp
 ${color2}open and split view V	${alignr}${color}:vsp
-
+####
 ${alignc}${color3}Multiple Files
 ${color2}open in a new buffer	${alignr}${color}:e
 ${color2}goto next buffer	    ${alignr}${color}:bn
@@ -44,7 +43,7 @@ ${color2}split horizontal		${alignr}${color}Ctrl+w,s
 ${color2}split vertical		    ${alignr}${color}Ctrl+w,v
 ${color2}switch windows		    ${alignr}${color}Ctrl+w,w
 ${color2}close window		    ${alignr}${color}Ctrl+w,q
-
+####
 ${alignc}${color3}Search/Replace
 ${color2}search for pattern	    ${alignr}${color}/pattern
 ${color2}search in reverse	    ${alignr}${color}?a-pattern
@@ -52,33 +51,33 @@ ${color2}repeat forwards	    ${alignr}${color} n
 ${color2}repeat backwards	    ${alignr}${color} N
 ${color2}replace word in line	${alignr}${color}:s/old/new/g
 ${color2}replace all matched	${alignr}${color}:%s/old/new/g
-
+####
 ${alignc}${color3}Completion
 ${color2}search backwards for typed     ${alignr}${color}Ctrl+p
 ${color2}search forwards for typed ${alignr}${color}Ctrl+n
 ${color2}complete line     ${alignr}${color}Ctrl+x / Ctrl+l
-
+####
 ${alignc}${color3}Resizing Windows
 ${color2}window width + ${alignr}${color}Ctrl+W, >
 ${color2}window width - ${alignr}${color}Ctrl+W, <
 ${color2}set height ${alignr}${color}xx Ctrl+W, _
 ${color2}set width ${alignr}${color} xx Ctrl+W, |
 ${color2}equal width and height ${alignr}${color} Ctrl+W, =
-  
+#### 
 ${alignc}${color3}Delete
 ${color2}delete excluding {x} ${alignr}${color}dt{x}
 ${color2}delete including {x} ${alignr}${color}dc{x}
-
+####
 ${alignc}${color3} Emacs
 ${color2}M-x ${alignr}${color}Alt-x
 ${color2}install package ${alignr}${color}package-install
 ${color2}load theme ${alignr}${color}load-theme
-
+####
 ${alignc}${color3} Firefox
 ${color2}Next tab ${alignr}${color}Ctrl+Tab
 ${color2}Previous tab ${alignr}${color}Ctrl+Shift+Tab
 ${color2}New tab ${alignr}${color}Ctrl+T
-
+####
 ${alignc}${color3} Bash
 ${color2}list files ${alignr}${color}ls -al
 ${color2}read file ${alignr}${color}cat file
@@ -88,7 +87,7 @@ ${color2}delete recursive ${alignr}${color} rm -r dir
 ${color2}delete 2 ${alignr}${color} find "name" -delete
 ${color2}move/rename files ${alignr}${color} mv src dest
 ${color2}copy ${alignr}${color} cp src dest
-
+####
 ${alignc}${color3} Cmus
 ${color2}play/pause ${alignr}${color} c
 ${color2}switch windows ${alignr}${color} TAB

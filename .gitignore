@@ -8,3 +8,4 @@
 !.emacs
 *.conky/old_configs
 *.conky/scripts
+*.vim/swp/

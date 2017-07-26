@@ -39,21 +39,21 @@ set $bg-color #2c2c2c
 set $text-color #fafafa
 
 # open file manager (nemo)
-bindsym $mod+Shift+f exec nemo
+bindsym $mod+Shift+f exec thunar
 
 # show hide bar
 bindsym $mod+y exec i3 bar mode toggle
 
 # start rofi
-bindsym $mod+d exec rofi -show run -font "Office Code Pro Medium 15" -fg "#bcbcbc" -bg "#2c2c2c" -hlfg "#ffd75f" -hlbg "#2c2c2c" -width 30 -lines 5 -padding 20 -separator-style none -hide-scrollbar -bw 2 -bc "#ffd75f"
+bindsym $mod+d exec rofi -show drun -font "Office Code Pro Medium 15" -fg "#bcbcbc" -bg "#2c2c2c" -hlfg "#ffd75f" -hlbg "#2c2c2c" -width 30 -lines 5 -padding 20 -separator-style none -hide-scrollbar -bw 2 -bc "#ffd75f"
 
 
 exec_always compton -f -D 3
 exec_always ~/.conky/startup_script.sh
 
 # little planet - dark background
-#exec_always feh --bg-fill ~/Pictures/Wallpapers/reddit/universe.png
-exec_always feh --bg-fill ~/Pictures/Wallpapers/datacenter_dark.jpg
+exec_always feh --bg-fill ~/Pictures/Wallpapers/reddit/universe.png
+#exec_always feh --bg-fill ~/Pictures/Wallpapers/datacenter_dark.jpg
 
 # turn on numlock
 exec_always --no-startup-id numlockx on
@@ -68,7 +68,7 @@ exec_always --no-startup-id numlockx on
 
 # 
 # Monitor setup
-exec_always --no-startup-id xrandr --output VGA-0 --auto --left-of DVI-D-0
+exec_always --no-startup-id xrandr --output VGA-1 --auto --left-of DVI-D-1
 
 
 # change focus
@@ -197,11 +197,16 @@ bar {
 #bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% #decrease sound volume
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute sound
 
-# Audio controls
-bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
-bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
-bindsym XF86AudioMute exec "amixer -D pulse set Master Playback Switch toggle"
+# Audio controls - Ubuntu 16.04
+#bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
+#bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
+#bindsym XF86AudioMute exec "amixer -D pulse set Master Playback Switch toggle"
+#
 
+# Audio controls - Debian testing
+bindsym XF86AudioRaiseVolume exec amixer -q sset Master 4%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q sset Master 4%- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
 
 # Touchpad controls
 #bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
@@ -218,7 +223,7 @@ bindsym Mod1+Control+l exec i3lock
 for_window [class="^.*"] border pixel 2 
 # window colors:
 #class          border backgr.  text  indicator child_border
-client.focused #ffff99 #ffff99 #282828 #ffff99 #ffffff
+client.focused #ffffff #ffffff #282828 #ffff99 #ffffff
 client.unfocused #2c2c2c #111111 #cccccc #ffffff #2c2c2c
 client.focused_inactive #2c2c2c #2c2c2c #555555 #ffffff #2c2c2c
 
