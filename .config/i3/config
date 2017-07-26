@@ -39,7 +39,7 @@ set $bg-color #2c2c2c
 set $text-color #fafafa
 
 # open file manager (nemo)
-bindsym $mod+Shift+f exec thunar
+bindsym $mod+Shift+f exec nemo
 
 # show hide bar
 bindsym $mod+y exec i3 bar mode toggle
@@ -48,11 +48,17 @@ bindsym $mod+y exec i3 bar mode toggle
 bindsym $mod+d exec rofi -show drun -font "Office Code Pro Medium 15" -fg "#bcbcbc" -bg "#2c2c2c" -hlfg "#ffd75f" -hlbg "#2c2c2c" -width 30 -lines 5 -padding 20 -separator-style none -hide-scrollbar -bw 2 -bc "#ffd75f"
 
 
+# execute compton
 exec_always compton -f -D 3
-exec_always ~/.conky/startup_script.sh
+# display conky
+exec ~/.conky/startup_script.sh
+
+# disable system bell sound when delete is pressed
+exec_always xset b off
 
 # little planet - dark background
-exec_always feh --bg-fill ~/Pictures/Wallpapers/reddit/universe.png
+#exec_always feh --bg-fill ~/Pictures/Wallpapers/reddit/universe.png
+exec --no-startup-id nitrogen --restore
 #exec_always feh --bg-fill ~/Pictures/Wallpapers/datacenter_dark.jpg
 
 # turn on numlock
@@ -181,7 +187,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        #tray_output primary
+        tray_output primary
         font pango: M+ 1mn 11px
         
         colors {
