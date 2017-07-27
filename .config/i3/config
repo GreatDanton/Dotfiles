@@ -45,7 +45,7 @@ bindsym $mod+Shift+f exec nemo
 bindsym $mod+y exec i3 bar mode toggle
 
 # start rofi
-bindsym $mod+d exec rofi -show drun -font "Office Code Pro Medium 15" -fg "#bcbcbc" -bg "#2c2c2c" -hlfg "#ffd75f" -hlbg "#2c2c2c" -width 30 -lines 5 -padding 20 -separator-style none -hide-scrollbar -bw 2 -bc "#ffd75f"
+bindsym $mod+d exec rofi -show drun -font "Office Code Pro Medium 15" -width 30 -lines 5 -padding 20 -separator-style none -hide-scrollbar -bw 2
 
 
 # execute compton

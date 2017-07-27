@@ -7,6 +7,8 @@
 !.conky
 !fonts
 !.emacs
+!.Xresources
 *.conky/old_configs
 *.conky/scripts
 *.vim/swp/
+
