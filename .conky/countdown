@@ -16,7 +16,7 @@ conky.config = {
 
 	use_xft = true,
 	xftalpha = 1,
-	font = 'RobotoMono Medium:size=9',
+	font = 'Office Code Pro Medium:size=9',
 	stippled_borders = 0,
 	border_width = 1,
 	draw_graph_borders = false,
@@ -29,5 +29,5 @@ conky.text = [[
 # uptime
 ${color2}${alignc}${font Bungee:normal:size=20}Write Thesis
 # Piping cat command to my script which reads arguments
-${alignc}${font OfficeCodeProMedium:normal:size=18}${color}${execi 6 ~/.conky/countDown "$(cat ~/COUNTDOWN.txt)"}
+${alignc}${font OfficeCodeProMedium:size=18}${color}${execi 6 ~/.conky/countDown "$(cat ~/COUNTDOWN.txt)"}
 ]];

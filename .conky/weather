@@ -22,13 +22,13 @@ conky.config = {
 	out_to_console = false,
 
 	alignment = 'bottom_left',
-	gap_y = 60,
+	gap_y = 10,
 	gap_x = 10,
 	border_inner_margin = 20,
 
 	use_xft = true,
 	xftalpha = 1,
-	font = 'Roboto Mono:size=10',
+	font = 'OfficeCodeProMedium:size=10',
 
 };
 

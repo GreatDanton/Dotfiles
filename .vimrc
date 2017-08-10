@@ -41,8 +41,6 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
 
-"highlight ColorColumn ctermbg=235 guibg=#2c2d27
-
 " different background at 120 chars
 let &colorcolumn="80,".join(range(120,999),",")
 
@@ -50,10 +48,13 @@ hi Cursor guifg=white guibg=black
 
 let g:indent_guides_auto_colors = 1
 
+
 " use hybrid theme
 call plug#begin()
+" vim hybrid theme
 Plug 'scwood/vim-hybrid'
 call plug#end()
+
 set background=dark
 
 colorscheme hybrid
@@ -61,22 +62,12 @@ filetype indent plugin on
 
 execute pathogen#infect()
 
-" vim syntastic plugin (checking syntax errors)
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-" END of syntastic plugin
-"
 " VUNDLE
 "call vundle#begin()
 "Plugin 'VundleVim/Vundle.vim'
 "Plugin 'Valloric/YouCompleteMe'
 "call vundle#end()
+"let g:ycm_server_python_interpreter ='/usr/bin/python'
 "
 
 "hi CursorLine cterm=none ctermbg=Black

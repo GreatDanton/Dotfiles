@@ -74,7 +74,9 @@ exec_always --no-startup-id numlockx on
 
 # 
 # Monitor setup
-exec_always --no-startup-id xrandr --output VGA-1 --auto --left-of DVI-D-1
+#exec_always --no-startup-id xrandr --output VGA-0 --auto --left-of DVI-D-0 --primary
+exec_always --no-startup-id xrandr --output DVI-D-0 --primary --right-of VGA-0
+
 
 
 # change focus

@@ -1,14 +1,20 @@
-# -- THEME AUTO-WRITTEN DO NOT EDIT
-include "/usr/share/themes/Greybird/gtk-2.0/gtkrc"
+# DO NOT EDIT! This file will be overwritten by LXAppearance.
+# Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
-style "user-font" {
-	font_name = "Ubuntu 9"
-}
-
-widget_class "*" style "user-font"
-
+include "/home/jan/.gtkrc-2.0.mine"
+gtk-theme-name="Greybird"
+gtk-icon-theme-name="elementary-xfce-darker"
 gtk-font-name="Ubuntu 9"
-
-include "/home/jan/.gtkrc.mine"
-
-# -- THEME AUTO-WRITTEN DO NOT EDIT
+gtk-cursor-theme-name="Vanilla-DMZ-AA"
+gtk-cursor-theme-size=24
+gtk-toolbar-style=GTK_TOOLBAR_ICONS
+gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
+gtk-button-images=1
+gtk-menu-images=0
+gtk-enable-event-sounds=1
+gtk-enable-input-feedback-sounds=0
+gtk-xft-antialias=1
+gtk-xft-hinting=1
+gtk-xft-hintstyle="hintfull"
+gtk-xft-rgba="rgb"
+gtk-modules="canberra-gtk-module"
