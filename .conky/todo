@@ -27,13 +27,12 @@ conky.config = {
 
 	use_xft = true,
 	xftalpha = 1,
-	font = 'OfficeCodeProMedium:size=10',
+	font = 'OfficeCodeProMedium:size=9',
 };
 
 conky.text = [[
-${color2}${font OfficeCodeProBold:size=9}TODO:
-${color1}${font OfficeCodeProMedium:size=9}${execi 60 cat ~/TODO.org} 
-ViM shortcuts
+${color2}${font OfficeCodePro:bold:size=10}Todo:
+${color1}${font OfficeCodePro:medium:size=9}${execi 60 cat ~/TODO.org} 
 
 # previous
 #${color2}${font M+ 1mn:bold:size=10}TODO:

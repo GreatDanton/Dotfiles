@@ -17,13 +17,13 @@ conky.config = {
 	use_xft = true,
 	xftalpha = 1,
 	maximum_width = 330,
-	font = 'OfficeCodeProMedium:size=9',
 	stippled_borders = 0,
 	border_width = 1,
 	draw_graph_borders = false,
     alignment = 'top_left',
     gap_x = 1650,
     gap_y = 10,
+	font = 'OfficeCodeProMedium:size=9',
 };
 
 conky.text = [[

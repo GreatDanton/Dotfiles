@@ -28,7 +28,7 @@ conky.config = {
 
 	use_xft = true,
 	xftalpha = 1,
-	font = 'OfficeCodeProMedium:size=10',
+	font = 'Office Code Pro:medium:size=10',
 
 };
 
