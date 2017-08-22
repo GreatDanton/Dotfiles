@@ -1,7 +1,6 @@
 conky.config = {
 	color1 = '#afafaf',
 	color2 = '#d64937',
-	color3 = '#afafaf',
 	minimum_width = 300, minimum_height = 100,
 
 	background = true,
@@ -11,7 +10,7 @@ conky.config = {
 	own_window_transparent = true,
 	double_buffer = true,
 	draw_shades = false,
-  update_interval = 3,
+    update_interval = 3,
 	draw_outline = false,
 	draw_borders = false,
 
@@ -29,9 +28,8 @@ conky.config = {
 	use_xft = true,
 	xftalpha = 1,
 	font = 'Office Code Pro:medium:size=10',
-
 };
 
 conky.text = [[
 ${color1}${execi 600 ~/.conky/getWeather}
- ]];
+]];
