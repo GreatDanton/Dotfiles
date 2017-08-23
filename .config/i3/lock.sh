@@ -12,7 +12,7 @@
 #i3lock -u -i "$tmpbg"
 
 
- AFTER
+#AFTER
 icon="$HOME/.config/i3/img_lock.png"
 
 scrot /tmp/screen.png
