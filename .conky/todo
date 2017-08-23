@@ -31,14 +31,15 @@ conky.config = {
 };
 
 conky.text = [[
-${color2}${font OfficeCodePro:bold:size=10}Todo:
+${color2}${font Bungee:normal:size=20}Todo
 ${color1}${font OfficeCodePro:medium:size=9}${execi 60 cat ~/TODO.org} 
 
 
 
-${font OfficeCodePro:medium:size=11}${execpi 300 ~/.conky/checkServer.sh}
+# servers part
+${font OfficeCodePro:medium:size=11}
+Servers
+${hr}
 
-# previous
-#${color2}${font M+ 1mn:bold:size=10}TODO:
-#${color1}${font M+ 1mn:normal:size=10}${execi 60 cat ~/TODO.org} 
+${execpi 300 ~/.conky/checkServer.sh}
 ]];

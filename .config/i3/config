@@ -35,7 +35,7 @@ bindsym $mod+Return exec gnome-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
-set $bg-color #2c2c2c
+set $bg-color #1c1c1c
 set $text-color #fafafa
 
 # open file manager (nemo)
@@ -225,13 +225,13 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # alt+control+l = lock screen 
-bindsym Mod1+Control+l exec i3lock
+bindsym Mod1+Control+l exec ~/.config/i3/lock.sh
 
 
 for_window [class="^.*"] border pixel 2 
 # window colors:
 #class          border backgr.  text  indicator child_border
 client.focused #ffffff #ffffff #282828 #ffff99 #ffffff
-client.unfocused #2c2c2c #111111 #cccccc #ffffff #2c2c2c
-client.focused_inactive #2c2c2c #2c2c2c #555555 #ffffff #2c2c2c
+client.unfocused #1c1c1c #111111 #cccccc #ffffff #1c1c1c
+client.focused_inactive #1c1c1c #1c1c1c #555555 #ffffff #1c1c1c
 
