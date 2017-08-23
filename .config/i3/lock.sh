@@ -11,14 +11,16 @@
 #convert "$tmpbg" "$icon" -gravity center -composite -matte "$tmpbg"
 #i3lock -u -i "$tmpbg"
 
+# tmp / screen / screen.png
 
 #AFTER
 icon="$HOME/.config/i3/img_lock.png"
+tmpbg="/tmp/screen.png"
 
-scrot /tmp/screen.png
-convert /tmp/screen.png -scale 10% -scale 1000%  /tmp/screen.png
+scrot "$tmpbg"
+convert "$tmpbg" -scale 10% -scale 1000%  "$tmpbg"
 
- if [[ -f $HOME/.config/i3/img_lock.png ]] 
+ if [[ -f "$icon" ]] 
 then
 # placement x/y
 PX=50
@@ -39,11 +41,11 @@ do
     PX=$(($SROX + $SRX/2 - $RX/2))
     PY=$(($SROY + $SRY/2 - $RY/2))
 
-    convert "/tmp/screen.png" "$icon" -geometry +$PX+$PY -composite -matte  /tmp/screen.png
+    convert "$tmpbg" "$icon" -geometry +$PX+$PY -composite -matte  "$tmpbg"
     echo "done"
 done
 fi
 # dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris  /MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop
 # i3lock  -I 10 -d -e -u -n -i /tmp/screen.png
-i3lock -e -n -i /tmp/screen.png
+i3lock -e -n -i "$tmpbg"
 
