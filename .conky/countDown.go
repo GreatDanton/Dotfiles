@@ -11,14 +11,21 @@ import (
 // reading final date from countdown file and calculating the amount
 // of days, hours, minutes, seconds between now and chosen final date
 func main() {
-
 	// data is imported via arguments
 	data := fmt.Sprint(os.Args[1])
 
-	// parse time in desired format (days.months.years)
-	t, err := time.Parse("2.1.2006", data)
+	// get location, so the time is parsed correctly according to the location
+	loc, err := time.LoadLocation("Local")
 	if err != nil {
-		fmt.Errorf("%s", err)
+		fmt.Println(err)
+		return
+	}
+
+	// parse time in desired format (days.months.years)
+	t, err := time.ParseInLocation("2.1.2006", data, loc)
+	if err != nil {
+		fmt.Println(err)
+		return
 	}
 
 	days, hours, minutes, seconds := timeDiff(t)
@@ -53,11 +60,11 @@ func timeDiff(t time.Time) (days, hours, minutes, seconds string) {
 
 // Prefixes a number with 0 if necessary
 func prefixNumber(number int64) string {
-	return_val := ""
+	returnVal := ""
 	if number < 10 && number > 0 {
-		return_val = fmt.Sprintf("0%v", number)
+		returnVal = fmt.Sprintf("0%v", number)
 	} else {
-		return_val = fmt.Sprintf("%v", number)
+		returnVal = fmt.Sprintf("%v", number)
 	}
-	return return_val
+	return returnVal
 }

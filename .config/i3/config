@@ -226,6 +226,9 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # alt+control+l = lock screen 
 bindsym Mod1+Control+l exec ~/.config/i3/lock.sh
+#
+# i3lock - display solid color with image 
+# exec i3lock -c 1c1c1c -i ~path/to/image
 
 
 for_window [class="^.*"] border pixel 2 
