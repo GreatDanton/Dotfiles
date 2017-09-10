@@ -153,6 +153,12 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+# move to next workspace
+# alt+control+key (vim like moving)
+bindsym Mod1+Control+l workspace next
+bindsym Mod1+Control+h workspace prev
+
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -225,7 +231,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # alt+control+l = lock screen 
-bindsym Mod1+Control+l exec ~/.config/i3/lock.sh
+bindsym $mod+Mod1+Control+l exec ~/.config/i3/lock.sh
 #
 # i3lock - display solid color with image 
 # exec i3lock -c 1c1c1c -i ~path/to/image
