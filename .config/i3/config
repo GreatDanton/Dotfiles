@@ -155,8 +155,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 # move to next workspace
 # alt+control+key (vim like moving)
-bindsym Mod1+Control+l workspace next
-bindsym Mod1+Control+h workspace prev
+bindsym Mod1+Control+l workspace next_on_output
+bindsym Mod1+Control+h workspace prev_on_output
 
 
 # reload the configuration file
