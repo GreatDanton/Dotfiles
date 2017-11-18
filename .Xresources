@@ -2,10 +2,10 @@
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: #1c1c1c, #ffffff, argb:2000000
-rofi.color-normal: #1c1c1c, #eaeaea, argb:0000000, argb:0000000, #ffd75f
-rofi.color-active: argb:f000000, #268bd2, argb:e000000, argb:2000000, argb:f000000
-rofi.color-urgent: argb:f000000, #dc322f, argb:e000000, argb:d000000, #fdf6e3
+rofi.color-window: #1c1c1c, #ffffff, #200000
+rofi.color-normal: #1c1c1c, #eaeaea, #1c1c1c, #1c1c1c, #ffd75f
+rofi.color-active: #f00000, #268bd2, #e00000, #200000, #f00000
+rofi.color-urgent: #f00000, #dc322f, #f00000, #f00000, #fdf6e3
 
 Xft.autohint: 1
 Xft.lcdfilter:  lcddefault
